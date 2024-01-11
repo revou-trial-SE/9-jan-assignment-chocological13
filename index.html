@@ -50,12 +50,20 @@
         #understanding-section, #myth-facts-section, #resources-section, #sources-section {
             background-size: cover;
             background-position: center;
+            background-color:rgba(149,179,152, 0.2);
+            border-radius: 10px;
+            padding: 5px;
+            text-align: justify;
         }
 
         .card {
             background-color: rgba(149,179,152, 0.2);
             border: solid #90a784;
             border-radius: 5px;
+        }
+
+        .card-text {
+            text-align: justify;
         }
 
         #support-img {
@@ -66,9 +74,11 @@
         /* Styles for mobile screens (viewport width less than 768 pixels) */
         @media (max-width: 767px) {
             #understanding-section, #myth-facts-section, #resources-section, #sources-section {
+            display: block;
             background-color:rgba(149,179,152, 0.2);
+            padding: 2vh;
+            align-self: auto;
             border-radius: 10px;
-            padding: 5px;
             text-align: justify;
             }
         }

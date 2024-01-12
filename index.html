@@ -17,6 +17,7 @@
         }
 
         /* Hero Section Styles */
+
         .hero-section {
             background-image: url('./img/bpd-banner.jpg');  
             background-size: cover;
@@ -26,13 +27,13 @@
             padding: 150px 0 150px 0;
         }
 
+        /* Hero Section BG, span so that the bg color only for the texts */
         .hero-section>h1, p {
             display: block;
         }
 
         .hero-section>h1 span {
             background-color: rgba(149,179,152, 0.15);
-            padding: vh;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 76px;
             font-weight: 40px;
@@ -40,14 +41,16 @@
 
         .hero-section>p span {
             background-color: rgba(149,179,152, 0.15);
-            padding: vh;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 20px;
         }
 
         /* Additional Styles for other sections, cards, etc. */
 
-        #understanding-section, #myth-facts-section, #resources-section, #sources-section {
+        #understanding-section,
+        #myths-facts-section,
+        #resources-section,
+        #sources-section {
             background-size: cover;
             background-position: center;
             background-color:rgba(149,179,152, 0.2);
@@ -56,13 +59,15 @@
             text-align: justify;
         }
 
+        #navigation-bar {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
         .card {
             background-color: rgba(149,179,152, 0.2);
             border: solid #90a784;
             border-radius: 5px;
-        }
-
-        .card-text {
             text-align: justify;
         }
 
@@ -73,7 +78,10 @@
 
         /* Styles for mobile screens (viewport width less than 768 pixels) */
         @media (max-width: 767px) {
-            #understanding-section, #myth-facts-section, #resources-section, #sources-section {
+            #understanding-section,
+            #myths-facts-section,
+            #resources-section,
+            #sources-section {
             display: block;
             background-color:rgba(149,179,152, 0.2);
             padding: 2vh;
@@ -98,16 +106,16 @@
     <!-- Navigation Bar -->
     <ul id="navigation-bar" class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#understanding-section">What is BPD?</a>
+          <a class="nav-link active link-success" aria-current="page" href="#understanding-section">What is BPD?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#myths-facts-secton">Myths & Facts</a>
+          <a class="nav-link link-success" href="#myths-facts-section">Myths & Facts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#resources-section">Resources</a>
+          <a class="nav-link link-success" href="#resources-section">Resources</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#sources-section">Sources</a>
+          <a class="nav-link link-success" href="#sources-section">Sources</a>
         </li>
       </ul>
 
@@ -128,7 +136,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
             <div class="col">
                 <div class="card h-100">
-                    <img src="./img/cry.jpg" alt="cry">
+                    <img src="./img/cry.jpg" class="card-img-top" alt="cry">
                     <div class="card-body">
                         <h5 class="card-title">You cannot treat BPD</h5>
                         <p class="card-text">
@@ -141,7 +149,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="./img/stigma.jpg" alt="stigma">
+                    <img src="./img/stigma.jpg" class="card-img-top" alt="stigma">
                     <div class="card-body">
                         <h5 class="card-title">BPD behaviour is just for a cry for attention and should be ignored</h5>
                         <p class="card-text">
@@ -155,7 +163,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="./img/bpd-mirror.jpg" alt="mirror">
+                    <img src="./img/bpd-mirror.jpg" class="card-img-top" alt="mirror">
                     <div class="card-body">
                         <h5 class="card-title">Having BPD (or any other mental illness) is a choice</h5>
                         <p class="card-text">
@@ -167,13 +175,15 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="./img/bpd-gift.jpg" alt="bpd-gift">
+                    <img src="./img/bpd-gift.jpg" class="card-img-top" alt="bpd-gift">
                     <div class="card-body">
                         <h5 class="card-title">BPD is a disorder with purely negative traits</h5>
                         <p class="card-text">
                             While it’s true that people with BPD live with no shortage of difficulties trying to manage their condition,
                             it’s also true that they typically tend to be
-                            <a href="https://www.borderlineintheact.org.au/living-with-bpd/strengths-and-qualities-of-bpd/">extremely empathetic, highly intelligent, have a serious creative streak, and feel passion</a>
+                            <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.borderlineintheact.org.au/living-with-bpd/strengths-and-qualities-of-bpd/">
+                                extremely empathetic, highly intelligent, have a serious creative streak, and feel passion
+                            </a>
                             on a deeper level than most people could even imagine. These are all things that could benefit someone in the workplace.
                         </p>
                     </div>
@@ -189,34 +199,34 @@
         <h6>Emergency Hotlines:</h6>
         <ul>
             <li>
-                <a class="link-opacity-50-hover" href="https://988lifeline.org">Suicide & Crisis Lifeline</a>
+                <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://988lifeline.org">Suicide & Crisis Lifeline</a>
             </li>
             <li>
-                <a href="https://www.samhsa.gov/find-help/disaster-distress-helpline">Disaster Distress Helpline</a>
+                <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.samhsa.gov/find-help/disaster-distress-helpline">Disaster Distress Helpline</a>
             </li>
             <li>
-                <a href="https://www.veteranscrisisline.net">Veteran Crisis Line</a>
+                <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.veteranscrisisline.net">Veteran Crisis Line</a>
             </li>
         </ul>
         <h6>Accurate and Honest Websites with Information on BPD:</h6>
         <ul>
             <li>
-                <a href="https://www.borderlinepersonalitydisorder.org">National Education Alliance for Borderline Personality Disorder (NEABPD)</a>
+                <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.borderlinepersonalitydisorder.org">National Education Alliance for Borderline Personality Disorder (NEABPD)</a>
             </li>
             <li>
-                <a href="https://www.nimh.nih.gov/health/topics/borderline-personality-disorder">National Institute of Mental Health</a>
+                <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.nimh.nih.gov/health/topics/borderline-personality-disorder">National Institute of Mental Health</a>
             </li>
             <li>
-                <a href="https://www.nami.org/About-Mental-Illness/Mental-Health-Conditions/Borderline-Personality-Disorder">National Alliance of Mental Illness</a>
+                <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.nami.org/About-Mental-Illness/Mental-Health-Conditions/Borderline-Personality-Disorder">National Alliance of Mental Illness</a>
             </li>
         </ul>
         <h6>Resources to Find a Therapist / Treatment Center that Treats BPD:</h6>
         <ul>
             <li>
-                <a href="https://www.nyp.org/bpdresourcecenter">BPD Resource Center</a>
+                <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.nyp.org/bpdresourcecenter">BPD Resource Center</a>
             </li>
             <li>
-                <a href="https://behavioraltech.org/find-therapist/">Behavioral Tech Institute</a>
+                <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://behavioraltech.org/find-therapist/">Behavioral Tech Institute</a>
             </li>
         </ul>
     </section>
@@ -226,19 +236,18 @@
         <h5>Sources</h5>
         <ul>
             <li>
-                <a href="https://www.nimh.nih.gov/health/topics/borderline-personality-disorder">National Institute of Mental Health</a>
+                <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.nimh.nih.gov/health/topics/borderline-personality-disorder">National Institute of Mental Health</a>
             </li>
             <li>
-                <a href="https://epicassist.org/borderline-personality-disorder-myths/">EPIC Assist</a>
+                <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://epicassist.org/borderline-personality-disorder-myths/">EPIC Assist</a>
             </li>
             <li>
-                <a href="https://www.verywellhealth.com/borderline-personality-bpd-triggers-examples-and-coping-5211705">Verywellhealth</a>
+                <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.verywellhealth.com/borderline-personality-bpd-triggers-examples-and-coping-5211705">Verywellhealth</a>
             </li>
         </ul>
     </section>
 
     <!-- Bootstrap JS and Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
